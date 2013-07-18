@@ -28,7 +28,7 @@
 	phpBB style name: *SE Gamer: Light
 	Based on style:   prosilver (this is the default phpBB3 style)
 	Original author:  Tom Beddard ( http://www.subblue.com/ )
-	Modified by:      Christian Bullock     
+	Modified by:      Christian Bullock
 -->
 
 <script type="text/javascript">
@@ -107,91 +107,44 @@
     <div class="border-top-right">
         <div class="inside" style="direction: {S_CONTENT_DIRECTION};">
         	<a id="top" name="top" accesskey="t"></a>
-        		<div class="headerbar">
-        			<div class="inner"><span class="corners-top"><span></span></span>
-                        <div style="text-align: <!-- IF $LOGO_POSITION == 'left' -->left<!-- ELSEIF $LOGO_POSITION == 'center' -->center<!-- ELSEIF $LOGO_POSITION == 'right' -->right<!-- ELSE -->left<!-- ENDIF -->;">
-                            <!-- IF $LOGO_TYPE == 'logo' -->
-                                <a href="{U_INDEX}" title="{L_INDEX}" id="logo">{SITE_LOGO_IMG}</a>
-                            <!-- ELSE -->
-                                <h1 class="logotext"><span>*</span>{SITENAME}</h1>
-                            <!-- ENDIF -->
-        				</div>
-        			</div>
-        		</div>
-                
-                <div class="nav">
-                	<div class="fl">
-                    	<ul>
-                        	<li<!-- IF SCRIPT_NAME eq 'index' --> class="current"<!-- ENDIF -->><a href="{U_INDEX}">{L_INDEX}</a></li>
-                            <li<!-- IF SCRIPT_NAME eq 'faq' --> class="current"<!-- ENDIF -->><a href="{U_FAQ}">{L_FAQ}</a></li>
-                            <!-- IF S_DISPLAY_MEMBERLIST -->
-                            	<li<!-- IF SCRIPT_NAME eq 'memberlist' --> class="current"<!-- ENDIF -->><a href="{U_MEMBERLIST}">{L_MEMBERLIST}</a></li>
-                            <!-- ENDIF -->
-                            <!-- IF S_DISPLAY_SEARCH -->
-                            	<li<!-- IF SCRIPT_NAME eq 'search' --> class="current"<!-- ENDIF -->><a href="{U_SEARCH}">{L_SEARCH}</a></li>
-                            <!-- ENDIF -->
-                        </ul>
-                    </div>
-                    <div class="fr">
-                    	<ul>
-                    		<!-- <li>
-                            	<a href="#">{L_DISPLAY} {L_OPTIONS} <span class="droptip"></span></a>
-                            	<div class="optionspanel">
-                                	User options coming in future release.
-                                </div>
-                            </li> -->
-                            <!-- IF $SHOW_SEARCH_IN_NAV == 'yes' -->
-                                <!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
-                                	<li>
-                                        <form action="{U_SEARCH}" method="get" id="search">
-                                            <input name="keywords" type="text" maxlength="128" title="{L_SEARCH_KEYWORDS}" class="quicksearch" value="<!-- IF SEARCH_WORDS-->{SEARCH_WORDS}<!-- ELSE -->{L_SEARCH_MINI}<!-- ENDIF -->" onclick="if(this.value=='{LA_SEARCH_MINI}')this.value='';" onblur="if(this.value=='')this.value='{LA_SEARCH_MINI}';" />
-                                        </form>
-                                    </li>
-                                <!-- ENDIF -->                            	
-                            <!-- ENDIF -->
-                        </ul>
-                    </div>
-                    <div class="cb"></div>
-                	<span class="nav-corners-bottom"><span></span></span>
-                </div>
-                
-                <br />    
-                
+        		<div class="headerbar"></div>
+                <br />
+
                 <!-- IF $SIDEBAR_ON_PAGES == 'global'  or ($SIDEBAR_ON_PAGES == 'index' and SCRIPT_NAME eq 'index') -->
                 <div class="sidebarwrapper">
                 	<!-- IF $SIDEBARS == 'left' -->
                         <div class="fixedfluid-sidebar">
                             <!-- INCLUDE sidebar_left.html -->
                         </div>
-                        
+
                         <div class="fixedfluid-content">
                     <!-- ELSEIF $SIDEBARS == 'right' -->
                     	<div class="fluidfixed-sidebar">
                         	<!-- INCLUDE sidebar_right.html -->
                         </div>
-                        
+
                         <div class="fluidfixed-content">
                     <!-- ELSEIF $SIDEBARS == 'both' -->
                     	<div class="fixedfluidfixed-left">
                         	<!-- INCLUDE sidebar_left.html -->
                         </div>
-                        
+
                         <div class="fixedfluidfixed-content">
                     <!-- ENDIF -->
                 <!-- ENDIF -->
-        
+
         		<div class="navbar">
         			<div class="inner"><span class="corners-top"><span></span></span>
-        
+
         			<ul class="linklist navlinks">
         				<li><i class="icon-home"></i> <a href="{U_INDEX}" accesskey="h">{L_INDEX}</a> <!-- BEGIN navlinks --> <strong>&#8249;</strong> <a href="{navlinks.U_VIEW_FORUM}">{navlinks.FORUM_NAME}</a><!-- END navlinks --></li>
-        
+
         				<!-- IF U_EMAIL_TOPIC --><li class="rightside"><a href="{U_EMAIL_TOPIC}" title="{L_EMAIL_TOPIC}" class="sendemail">{L_EMAIL_TOPIC}</a></li><!-- ENDIF -->
         				<!-- IF U_EMAIL_PM --><li class="rightside"><a href="{U_EMAIL_PM}" title="{L_EMAIL_PM}" class="sendemail">{L_EMAIL_PM}</a></li><!-- ENDIF -->
         				<!-- IF U_PRINT_TOPIC --><li class="rightside"><a href="{U_PRINT_TOPIC}" title="{L_PRINT_TOPIC}" accesskey="p" class="print">{L_PRINT_TOPIC}</a></li><!-- ENDIF -->
         				<!-- IF U_PRINT_PM --><li class="rightside"><a href="{U_PRINT_PM}" title="{L_PRINT_PM}" accesskey="p" class="print">{L_PRINT_PM}</a></li><!-- ENDIF -->
         			</ul>
-        
+
         			<!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
         			<ul class="linklist leftside">
         				<li><i class="icon-pencil"></i>
@@ -206,20 +159,20 @@
         				</li>
         			</ul>
         			<!-- ENDIF -->
-        
+
         			<ul class="linklist rightside">
         				<!-- IF not S_IS_BOT -->
 							<!-- IF not S_USER_LOGGED_IN and S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) --><li><i class="icon-plus"></i> <a href="{U_REGISTER}">{L_REGISTER}</a></li><!-- ENDIF -->
 							<li><i class="icon-off"></i> <a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x">{L_LOGIN_LOGOUT}</a></li>
         				<!-- ENDIF -->
         			</ul>
-        
+
         			<span class="corners-bottom"><span></span></span></div>
         		</div>
-        
+
         	<a name="start_here"></a>
         	<div id="page-body">
-        		
+
 				<!-- IF S_BOARD_DISABLED and S_USER_LOGGED_IN and (U_MCP or U_ACP) -->
 				<div id="information" class="rules">
         			<div class="inner"><span class="corners-top"><span></span></span>
@@ -227,4 +180,4 @@
         			<span class="corners-bottom"><span></span></span></div>
         		</div>
         		<!-- ENDIF -->
-                
+
