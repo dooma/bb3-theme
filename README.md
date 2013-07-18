@@ -1,4 +1,4 @@
 phpBB3 theme
 ============
 
-It's created for personally use.
+It's subsilver theme edited for personally use.
