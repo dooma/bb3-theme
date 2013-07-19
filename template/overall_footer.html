@@ -1,53 +1,77 @@
-    	</div>
-                <!-- IF $SIDEBAR_ON_PAGES == 'global' or ($SIDEBAR_ON_PAGES == 'index' and SCRIPT_NAME eq 'index')-->
-                    <!-- IF $SIDEBARS == 'left' or $SIDEBARS == 'right' -->
-                        </div><!-- /.fixedfluidcontent -->
-                        </div><!-- /.sidebarwrapper -->
-                    <!-- ELSEIF $SIDEBARS == 'both' -->
+                    </div>
+                    <!-- IF $SIDEBAR_ON_PAGES == 'global' or ($SIDEBAR_ON_PAGES == 'index' and SCRIPT_NAME eq 'index')-->
+                      <!-- IF $SIDEBARS == 'left' or $SIDEBARS == 'right' -->
+                          </div>
+                          <!-- /.fixedfluidcontent -->
                         </div>
-                        <div class="fixedfluidfixed-right">
+                        <!-- /.sidebarwrapper -->
+                      <!-- ELSEIF $SIDEBARS == 'both' -->
+                          </div>
+                          <div class="fixedfluidfixed-right">
                             <!-- INCLUDE sidebar_right.html -->
+                          </div>
                         </div>
-                        </div>
+                      <!-- ENDIF -->
+                      </div>
                     <!-- ENDIF -->
-                    	</div>
-                <!-- ENDIF -->
 
+                  </div>
+                </div>
+                <div class="border-bottom">
+                  <span>
+                    <span></span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            </div></div>
-        <div class="border-bottom"><span><span></span></span></div>
-    </div></div></div></div></div>
-</div>
+    <div class="copyright">
 
-	<div class="copyright">
+      <!-- Hugs & Kisses to those that leave the following credit line in the footer. It helps keep us maintain the style in the future :) -->
+      <span>*</span>
+      SE Gamer Style by <a href="http://www.bbtuts.com"><span>phpBB Tutorial</span></a>
+      <!-- ...or you could have cookies and milk instead. Hmmm....cookies. :) -->
 
-    	<!-- Hugs & Kisses to those that leave the following credit line in the footer. It helps keep us maintain the style in the future :) -->
-    	<span>*</span>SE Gamer Style by <a href="http://www.bbtuts.com"><span>phpBB Tutorial</span></a>
-        <!-- ...or you could have cookies and milk instead. Hmmm....cookies. :) -->
+      <br />
+      {CREDIT_LINE}
+      <!-- IF TRANSLATION_INFO -->
+        <br />
+        {TRANSLATION_INFO}
+      <!-- ENDIF -->
+      <!-- IF DEBUG_OUTPUT -->
+        <br />
+        {DEBUG_OUTPUT}
+      <!-- ENDIF -->
+      <!-- IF U_ACP -->
+        <br />
+        <strong>
+          <a href="{U_ACP}">{L_ACP}</a>
+        </strong>
+      <!-- ENDIF -->
+    </div>
 
-    <br />{CREDIT_LINE}
-		<!-- IF TRANSLATION_INFO --><br />{TRANSLATION_INFO}<!-- ENDIF -->
-		<!-- IF DEBUG_OUTPUT --><br />{DEBUG_OUTPUT}<!-- ENDIF -->
-		<!-- IF U_ACP --><br /><strong><a href="{U_ACP}">{L_ACP}</a></strong><!-- ENDIF -->
-	</div>
-
-<!-- IF SCRIPT_NAME eq 'viewforum' -->
-	<script type="text/javascript">
-    // <![CDATA[
-        $("span.topictype").each(function() {
+    <!-- IF SCRIPT_NAME eq 'viewforum' -->
+      <script type="text/javascript">
+        // <![CDATA[
+          $("span.topictype").each(function() {
             var text = $(this).text();
             text = text.replace(":", "");
             $(this).text(text);
-        });
-    // ]]>
-    </script>
-<!-- ENDIF -->
+          });
+        // ]]>
+      </script>
+    <!-- ENDIF -->
 
+    <div>
+      <a id="bottom" name="bottom" accesskey="z"></a>
+      <!-- IF not S_IS_BOT -->
+        {RUN_CRON_TASK}
+      <!-- ENDIF -->
+    </div>
 
-<div>
-	<a id="bottom" name="bottom" accesskey="z"></a>
-	<!-- IF not S_IS_BOT -->{RUN_CRON_TASK}<!-- ENDIF -->
-</div>
-
-</body>
+  </body>
 </html>
