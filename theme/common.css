@@ -95,9 +95,13 @@ p.right {
 	text-align: right;
 }
 
+p.time {
+  float: right;
+}
+
 /* Border
 ---------------------------------------- */
-.border-left { 
+.border-left {
     background: url("{T_THEME_PATH}/images/border_left.gif") #FFFFFF repeat-y 0 0;
 }
 
@@ -105,8 +109,8 @@ p.right {
     background: url("{T_THEME_PATH}/images/border_right.gif") repeat-y 100% 0;
 }
 
-.border-top { 
-    background: url("{T_THEME_PATH}/images/border_top.gif") repeat-x 0 0; 
+.border-top {
+    background: url("{T_THEME_PATH}/images/border_top.gif") repeat-x 0 0;
 }
 
 .border-top-left {
@@ -117,7 +121,7 @@ p.right {
     background: url("{T_THEME_PATH}/images/border_top_right.gif") no-repeat 100% 0;
 }
 
-.border-bottom { 
+.border-bottom {
     background: url("{T_THEME_PATH}/images/border_bottom2.gif") repeat-x 0 100%;
 }
 
@@ -126,14 +130,14 @@ p.right {
 .border-bottom span {
     background: url("{T_THEME_PATH}/images/border_bottom.gif") no-repeat 0 -104px;
     display: block;
-    height: 18px; 
+    height: 18px;
 }
 
-.border-bottom span span { 
+.border-bottom span span {
     background-position: 100% -35px;
 }
 
-.inside { 
+.inside {
     padding: 17px 27px 10px 27px;
 }
 
@@ -474,7 +478,7 @@ table.info tbody th {
 
 /* Misc layout styles
 ---------------------------------------- */
-/* column[1-2] styles are containers for two column layouts 
+/* column[1-2] styles are containers for two column layouts
    Also see tweaks.css */
 .column1 {
 	float: left;
