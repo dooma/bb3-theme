@@ -110,13 +110,13 @@ a.forumtitle:active, a.topictitle:active {
 /* Profile searchresults */
 .search .postprofile a {
 	color: #898989;
-	text-decoration: none; 
+	text-decoration: none;
 	font-weight: normal;
 }
 
 .search .postprofile a:hover {
 	color: #d3d3d3;
-	text-decoration: underline; 
+	text-decoration: underline;
 }
 
 /* Back to top of page */
@@ -201,4 +201,9 @@ a.right:hover {
 a.feed-icon-forum {
 	float: right;
 	margin: 3px;
+}
+
+ul.linklist.rightside {
+  margin-top: 5px;
+  margin-bottom: -5px;
 }
