@@ -108,21 +108,6 @@
         <div class="inside" style="direction: {S_CONTENT_DIRECTION};">
         	<a id="top" name="top" accesskey="t"></a>
         		<div class="headerbar"></div>
-            <!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
-              <form method="post" action="{S_LOGIN_ACTION}" class="headerspace">
-                <h3><a href="{U_LOGIN_LOGOUT}">{L_LOGIN_LOGOUT}</a><!-- IF S_REGISTER_ENABLED -->&nbsp; &bull; &nbsp;<a href="{U_REGISTER}">{L_REGISTER}</a><!-- ENDIF --></h3>
-                <fieldset class="quick-login">
-                  <label for="username">{L_USERNAME}:</label>&nbsp;<input type="text" name="username" id="username" size="10" class="inputbox" title="{L_USERNAME}" />
-                  <label for="password">{L_PASSWORD}:</label>&nbsp;<input type="password" name="password" id="password" size="10" class="inputbox" title="{L_PASSWORD}" />
-                  <!-- IF S_AUTOLOGIN_ENABLED -->
-                    | <label for="autologin">{L_LOG_ME_IN} <input type="checkbox" name="autologin" id="autologin" /></label>
-                  <!-- ENDIF -->
-                  <input type="submit" name="login" value="{L_LOGIN}" class="button2" />
-                  {S_LOGIN_REDIRECT}
-                </fieldset>
-              </form>
-            <!-- ENDIF -->
-
                 <br />
 
                 <!-- IF $SIDEBAR_ON_PAGES == 'global'  or ($SIDEBAR_ON_PAGES == 'index' and SCRIPT_NAME eq 'index') -->
@@ -160,19 +145,24 @@
         				<!-- IF U_PRINT_PM --><li class="rightside"><a href="{U_PRINT_PM}" title="{L_PRINT_PM}" accesskey="p" class="print">{L_PRINT_PM}</a></li><!-- ENDIF -->
         			</ul>
 
-        			<!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
-        			<ul class="linklist leftside">
-        				<li>
-                  <i class="icon-pencil"></i>
-                  <a href="{U_PROFILE}" title="{L_PROFILE}" accesskey="e">{L_PROFILE}</a>
-                  <!-- IF S_DISPLAY_PM -->&nbsp;&nbsp;<i class="icon-envelope-alt"></i> <a href="{U_PRIVATEMSGS}">{PRIVATE_MESSAGE_INFO}</a><!-- ENDIF -->
-                  <!-- IF S_DISPLAY_SEARCH --> &nbsp;&bull;
-                    &nbsp;<a href="{U_SEARCH_SELF}">{L_SEARCH_SELF}</a>
-                  <!-- ENDIF -->
-                  <!-- IF U_RESTORE_PERMISSIONS --> &bull;
-                    <a href="{U_RESTORE_PERMISSIONS}">{L_RESTORE_PERMISSIONS}</a>
-                  <!-- ENDIF -->
-        				</li>
+              <div>
+                <!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
+                <ul class="linklist leftside">
+                  <li>
+                    <i class="icon-pencil"></i>
+                    <a href="{U_PROFILE}" title="{L_PROFILE}" accesskey="e">{L_PROFILE}</a>
+                    <!-- IF S_DISPLAY_PM -->&nbsp;&nbsp;<i class="icon-envelope-alt"></i> <a href="{U_PRIVATEMSGS}">{PRIVATE_MESSAGE_INFO}</a><!-- ENDIF -->
+                    <!-- IF S_DISPLAY_SEARCH --> &nbsp;&bull;
+                      &nbsp;<a href="{U_SEARCH_SELF}">{L_SEARCH_SELF}</a>
+                    <!-- ENDIF -->
+                    <!-- IF U_RESTORE_PERMISSIONS --> &bull;
+                      <a href="{U_RESTORE_PERMISSIONS}">{L_RESTORE_PERMISSIONS}</a>
+                    <!-- ENDIF -->
+                  </li>
+
+                </ul>
+                <!-- ENDIF -->
+
                 <ul class="linklist rightside">
                   <!-- IF not S_IS_BOT -->
                     <!-- IF not S_USER_LOGGED_IN and S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) -->
@@ -181,8 +171,7 @@
                     <li><i class="icon-off"></i> <a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x">{L_LOGIN_LOGOUT}</a></li>
                   <!-- ENDIF -->
                 </ul>
-              </ul>
-        			<!-- ENDIF -->
+              </div>
 
 
         			<span class="corners-bottom"><span></span></span></div>
